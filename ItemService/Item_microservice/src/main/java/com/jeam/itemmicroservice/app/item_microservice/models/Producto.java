@@ -13,5 +13,6 @@ public class Producto {
     private String productDescription;
     private Double productPrice;
     private Date createdAt;
+    private Integer port;
 
 }

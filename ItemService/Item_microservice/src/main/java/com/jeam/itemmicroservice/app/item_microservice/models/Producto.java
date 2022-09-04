@@ -11,7 +11,7 @@ public class Producto {
     private Long id;
     private String productName;
     private String productDescription;
-    private String productPrice;
+    private Double productPrice;
     private Date createdAt;
 
 }

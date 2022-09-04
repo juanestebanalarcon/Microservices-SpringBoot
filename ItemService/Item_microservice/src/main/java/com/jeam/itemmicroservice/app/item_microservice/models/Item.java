@@ -8,4 +8,15 @@ import lombok.Setter;
 public class Item {
     private Producto producto;
     private Integer amount;
+
+    public Item(Producto producto, Integer amount) {
+        this.producto = producto;
+        this.amount = amount;
+    }
+
+    public Item() {
+    }
+    public Double getTotalPrice() {
+        return producto.getProductPrice()*amount.doubleValue();
+    }
 }

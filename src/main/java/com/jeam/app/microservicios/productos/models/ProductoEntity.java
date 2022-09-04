@@ -18,9 +18,9 @@ public class ProductoEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     private Long id;
-    private String productoName;
-    private String productoDescription;
-    private String productoPrice;
+    private String productName;
+    private String productDescription;
+    private String productPrice;
     @Column(name = "createdAt")
     @Temporal(TemporalType.DATE)
     private Date createdAt;

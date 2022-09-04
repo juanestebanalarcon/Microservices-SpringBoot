@@ -3,6 +3,7 @@ package com.jeam.itemmicroservice.app.item_microservice.controllers;
 import com.jeam.itemmicroservice.app.item_microservice.models.Item;
 import com.jeam.itemmicroservice.app.item_microservice.services.IitemService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,6 +15,7 @@ import java.util.List;
 public class ItemController {
 
     @Autowired
+    @Qualifier("ItemServiceFeign")
     IitemService itemService;
 
     @GetMapping("/items/getAllItems")

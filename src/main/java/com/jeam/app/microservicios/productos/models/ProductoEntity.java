@@ -13,6 +13,8 @@ import java.util.Date;
 @Table(name="productos")
 public class ProductoEntity implements Serializable {
 
+    @Transient
+    private Integer port;
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

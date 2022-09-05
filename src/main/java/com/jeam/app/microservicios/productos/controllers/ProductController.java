@@ -25,10 +25,11 @@ public class ProductController {
         return service.findAll();
     }
     @GetMapping("/getProduct/{id}")
-    public ProductoEntity ReadProduct(@PathVariable Long id){
+    public ProductoEntity ReadProduct(@PathVariable Long id) throws InterruptedException {
         ProductoEntity producto = service.findById(id);
       //  producto.setPort(Integer.parseInt(environment.getProperty("local.server.port")));
         producto.setPort(port);
+        Thread.sleep(2000L);
         return producto;
     }
 }
